@@ -50,7 +50,7 @@ export default {
     return {
       stronglyConsistentRead: false,
       messagesPerSecond: 1,
-      message: '{"name": "julio cesar", "email": "julio@email.com", "phone": "+5541999999999", "age": 25, "genre": "male", "role": "architect", "company": "blackdevs", "address": "street unknown", "city": "curitiba", "state": "parana", "country": "brazil", "description": "Solid knowledge in software development with multiple programming languages, cloud computing, databases, operational systems, virtualization."}',
+      message: '{"message": "SAMPLE MESSAGE"}',
     }
   },
   computed: {
