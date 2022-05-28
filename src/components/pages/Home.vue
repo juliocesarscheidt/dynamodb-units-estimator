@@ -16,7 +16,7 @@
       </div>
 
       <div class="container-data">
-        <h3>Read => RCU (Read Capacity Units)</h3>
+        <h3>RCU (Read Capacity Units)</h3>
         <div class="input-group-text">
           <input class="form-check-label mr-2" type="checkbox" name="stronglyConsistentRead" id="stronglyConsistentRead" v-model="stronglyConsistentRead">
           <label class="form-check-label" for="stronglyConsistentRead">Strongly Consistent</label>
@@ -25,7 +25,7 @@
       </div>
 
       <div class="container-data">
-        <h3>Write => WCU (Read Capacity Units)</h3>
+        <h3>WCU (Write Capacity Units)</h3>
         <p>{{ calculatedWriteUnits }} WCU</p>
       </div>
     </article>
