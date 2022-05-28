@@ -67,10 +67,10 @@ export default {
       }
       const messages = Math.ceil(messageSizeCalculated / 4);
       const stronglyConsistentReadMultiplier = this.stronglyConsistentRead ? 1 : 2;
-      return (messages * this.messagesPerSecond) / stronglyConsistentReadMultiplier;
+      return Math.ceil((this.messagesPerSecond * (messages)) / stronglyConsistentReadMultiplier);
     },
     calculatedWriteUnits() {
-      return this.messageSize * this.messagesPerSecond;
+      return Math.ceil(this.messageSize * this.messagesPerSecond);
     },
   },
   watch: {
