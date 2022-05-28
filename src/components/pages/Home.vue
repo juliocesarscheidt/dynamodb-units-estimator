@@ -12,7 +12,7 @@
 
       <div class="input-group-text mb-4">
         <label class="form-check-label mr-2" for="messagesPerSecond">Messages Per Second</label>
-        <input type="number" name="messagesPerSecond" id="messagesPerSecond" v-model.number="messagesPerSecond">
+        <input type="number" min="1" name="messagesPerSecond" id="messagesPerSecond" v-model.number="messagesPerSecond">
       </div>
 
       <div class="container-data">
@@ -104,6 +104,7 @@ section > article {
 
 .container-data {
   padding: 20px;
+  width: 300px;
   background: #eee; /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #eee, #fff); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #eee, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
