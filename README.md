@@ -1,25 +1,12 @@
-# BOok Recommendations Client
+# DynamoDB Units Estimator
+
+Front-end to estimate the RCU e WCU for DynamoDB Tables when using Provisioned Capacity
+
+> [https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html)
 
 ## Project setup
 ```
 npm install
-```
-
-```
-{
-  "name": "julio cesar",
-  "email": "julio@email.com",
-  "phone": "+5541999999999",
-  "age": 25,
-  "genre": "male",
-  "role": "architect",
-  "company": "blackdevs",
-  "address": "street unknown number 0000",
-  "city": "curitiba",
-  "state": "parana",
-  "country": "brazil",
-  "description": "Solid knowledge in software development with multiple programming languages, cloud computing, databases"
-}
 ```
 
 ### Compiles and hot-reloads for development
