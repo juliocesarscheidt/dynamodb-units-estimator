@@ -7,7 +7,7 @@
 
       <textarea name="message" id="message" cols="30" rows="10" class="form-control" style="resize: none;" v-model="message"></textarea>
       <code class="mb-4">
-        Message Size: {{ parseFloat(messageSizeInBytes / 1024).toFixed(2) }} KBs
+        Message Size: {{ messageSizeInKBs.toFixed(2) }} KBs / {{ messageSizeInBytes.toFixed(2) }} bytes
       </code>
 
       <div class="input-group-text mb-4">
