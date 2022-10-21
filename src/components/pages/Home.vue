@@ -5,9 +5,9 @@
         Maximum size for an item in a table is 400 KBs
       </p>
 
-      <textarea name="message" id="message" cols="30" rows="10" class="form-control" style="resize: none;" v-model="message" maxlength="400"></textarea>
+      <textarea name="message" id="message" cols="30" rows="10" class="form-control" style="resize: none;" v-model="message"></textarea>
       <code class="mb-4">
-        Message Size: {{ messageSize }} KBs
+        Message Size: {{ parseFloat(messageSizeInBytes / 1024).toFixed(2) }} KBs
       </code>
 
       <div class="input-group-text mb-4">
@@ -56,11 +56,14 @@ export default {
   computed: {
     ...mapState([]),
     ...mapGetters([]),
-    messageSize() {
+    messageSizeInBytes() {
       return new Blob([this.message]).size;
     },
+    messageSizeInKBs() {
+      return parseFloat(this.messageSizeInBytes / 1024);
+    },
     calculatedReadUnits() {
-      let messageSizeCalculated = this.messageSize;
+      let messageSizeCalculated = this.messageSizeInKBs;
       const remnant = messageSizeCalculated % 4;
       if (remnant !== 0) {
         messageSizeCalculated = messageSizeCalculated + (4 - remnant);
@@ -70,7 +73,7 @@ export default {
       return Math.ceil((this.messagesPerSecond * (messages)) / stronglyConsistentReadMultiplier);
     },
     calculatedWriteUnits() {
-      return Math.ceil(this.messageSize * this.messagesPerSecond);
+      return Math.ceil(this.messageSizeInKBs * this.messagesPerSecond);
     },
   },
   watch: {
