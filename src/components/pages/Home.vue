@@ -60,7 +60,7 @@ export default {
       return new Blob([this.message]).size;
     },
     messageSizeInKBs() {
-      return parseFloat(this.messageSizeInBytes / 1024);
+      return parseFloat(this.messageSizeInBytes / 1000);
     },
     calculatedReadUnits() {
       let messageSizeCalculated = this.messageSizeInKBs;
